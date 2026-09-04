@@ -1,0 +1,34 @@
+{
+  "player_name": "ryan",
+  "player_scores": {
+    "flash": 4200,
+    "dodge": 2065,
+    "spot_it": 750,
+    "archery": 4950,
+    "traffic": 12608,
+    "memory": 0,
+    "block_drop": 400,
+    "sky_dash": 150,
+    "find_secret": 1669500,
+    "color_chaos": 10600
+  },
+  "player_points": 257109,
+  "rivals": [],
+  "players": {
+    "ryan": {
+      "points": 257109,
+      "scores": {
+        "flash": 4200,
+        "dodge": 2065,
+        "spot_it": 750,
+        "archery": 4950,
+        "traffic": 12608,
+        "memory": 0,
+        "block_drop": 400,
+        "sky_dash": 150,
+        "find_secret": 1669500,
+        "color_chaos": 10600
+      }
+    }
+  }
+}

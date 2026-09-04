@@ -1,0 +1,186 @@
+:root {
+  --sky-top: #4facfe;
+  --sky-bottom: #c2e9fb;
+  --cream: #fefce8;
+  --yellow: #fde047;
+  --coral: #f97316;
+  --pink: #f472b6;
+  --mint: #4ade80;
+  --purple: #a855f7;
+  --blue: #38bdf8;
+  --slate: #1e293b;
+  --card-shadow: #94a3b8;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial Rounded MT Bold', 'Trebuchet MS', sans-serif;
+}
+
+body {
+  background: linear-gradient(180deg, var(--sky-top) 0%, var(--sky-bottom) 100%);
+  min-height: 100vh;
+  color: var(--slate);
+  overflow-x: hidden;
+  position: relative;
+}
+
+.sky-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.pixel-cloud {
+  position: absolute;
+  background: #ffffff;
+  border-radius: 6px;
+  box-shadow: 0 4px 0 rgba(226, 232, 240, 0.9);
+}
+.cloud-1 { width: 130px; height: 38px; top: 8%; left: 8%; }
+.cloud-2 { width: 190px; height: 48px; top: 16%; right: 10%; }
+.cloud-3 { width: 110px; height: 32px; top: 48%; left: 14%; }
+
+.launcher-container {
+  position: relative;
+  z-index: 1;
+  max-width: 1020px;
+  margin: 0 auto;
+  padding: 30px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.logo {
+  font-size: 3.4rem;
+  color: var(--coral);
+  text-shadow: 4px 4px 0 var(--slate);
+  letter-spacing: 2px;
+}
+
+.tagline {
+  font-size: 1.15rem;
+  color: var(--slate);
+  margin-top: 4px;
+  font-weight: bold;
+}
+
+.game-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 22px;
+  width: 100%;
+  margin-bottom: 35px;
+}
+
+.card {
+  background: #ffffff;
+  border: 3px solid var(--slate);
+  border-radius: 16px;
+  padding: 24px 20px;
+  box-shadow: 0 6px 0 var(--slate);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 0 var(--slate);
+}
+
+.card-badge {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  font-size: 0.72rem;
+  font-weight: bold;
+  background: var(--cream);
+  border: 2px solid var(--slate);
+  padding: 3px 8px;
+  border-radius: 8px;
+}
+
+.card-icon {
+  width: 64px;
+  height: 64px;
+  border: 3px solid var(--slate);
+  border-radius: 12px;
+  margin-bottom: 14px;
+}
+
+.flash-icon   { background: radial-gradient(circle, var(--yellow) 40%, var(--coral) 100%); }
+.dodge-icon   { background: radial-gradient(circle, var(--coral) 30%, #ef4444 100%); }
+.spot-icon    { background: radial-gradient(circle, var(--mint) 40%, #10b981 100%); }
+.archery-icon { background: radial-gradient(circle, var(--pink) 40%, #db2777 100%); }
+.traffic-icon { background: radial-gradient(circle, var(--blue) 40%, #2563eb 100%); }
+.memory-icon  { background: radial-gradient(circle, var(--purple) 40%, #7c3aed 100%); }
+
+.card h2 {
+  font-size: 1.4rem;
+  margin-bottom: 8px;
+  color: var(--slate);
+}
+
+.card p {
+  font-size: 0.88rem;
+  line-height: 1.4;
+  color: #64748b;
+  margin-bottom: 16px;
+  flex-grow: 1;
+}
+
+.score-display {
+  font-size: 1rem;
+  font-weight: bold;
+  color: var(--slate);
+  background: var(--cream);
+  border: 2px solid var(--slate);
+  padding: 6px 14px;
+  border-radius: 10px;
+}
+
+.launch-instructions {
+  width: 100%;
+  max-width: 520px;
+}
+
+.instruction-box {
+  background: #ffffff;
+  border: 3px solid var(--slate);
+  border-radius: 16px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 5px 0 var(--slate);
+}
+
+.instruction-box h3 {
+  margin-bottom: 6px;
+  font-size: 1.15rem;
+}
+
+.instruction-box code {
+  display: inline-block;
+  margin-top: 8px;
+  background: var(--slate);
+  color: var(--yellow);
+  padding: 8px 18px;
+  border-radius: 8px;
+  font-family: monospace;
+  font-size: 1.05rem;
+}

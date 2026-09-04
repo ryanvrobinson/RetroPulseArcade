@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RetroPulse Arcade — 10-Game Tournament</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="sky-background">
+    <div class="pixel-cloud cloud-1"></div>
+    <div class="pixel-cloud cloud-2"></div>
+    <div class="pixel-cloud cloud-3"></div>
+  </div>
+
+  <main class="launcher-container">
+    <header class="header">
+      <h1 class="logo">RETRO PULSE</h1>
+      <p class="tagline">10-Game 2D Pixel Arcade Tournament</p>
+      <div class="player-pill">Player: <span id="player-nickname">YOU</span> | Rank: <span id="player-rank">#1</span></div>
+    </header>
+
+    <section class="game-grid">
+      <article class="card card-yellow">
+        <div class="card-badge">Reaction</div>
+        <div class="card-icon flash-icon"></div>
+        <h2>FLASH!</h2>
+        <p>Burst pulsing targets across floating sky clouds.</p>
+        <div class="score-display">Best: <span id="score-flash">0</span></div>
+      </article>
+
+      <article class="card card-coral">
+        <div class="card-badge">Survival</div>
+        <div class="card-icon dodge-icon"></div>
+        <h2>DON'T GET HIT!</h2>
+        <p>Weave past bouncing hazard storms.</p>
+        <div class="score-display">Best: <span id="score-dodge">0</span></div>
+      </article>
+
+      <article class="card card-mint">
+        <div class="card-badge">Observation</div>
+        <div class="card-icon spot-icon"></div>
+        <h2>SPOT IT!</h2>
+        <p>Memorize items in the meadow and find what changed.</p>
+        <div class="score-display">Best: <span id="score-spot_it">0</span></div>
+      </article>
+
+      <article class="card card-pink">
+        <div class="card-badge">Skill Shot</div>
+        <div class="card-icon archery-icon"></div>
+        <h2>ARCHERY</h2>
+        <p>Calculate trajectories and hit target bullseyes.</p>
+        <div class="score-display">Best: <span id="score-archery">0</span></div>
+      </article>
+
+      <article class="card card-blue">
+        <div class="card-badge">Speed</div>
+        <div class="card-icon traffic-icon"></div>
+        <h2>TRAFFIC RIDER</h2>
+        <p>Dodge city highway traffic and rack up near-misses.</p>
+        <div class="score-display">Best: <span id="score-traffic">0</span></div>
+      </article>
+
+      <article class="card card-purple">
+        <div class="card-badge">Memory</div>
+        <div class="card-icon memory-icon"></div>
+        <h2>MEMORY PUZZLE</h2>
+        <p>Uncover and match cartoon card pairs against the clock.</p>
+        <div class="score-display">Best: <span id="score-memory">0</span></div>
+      </article>
+
+      <article class="card card-yellow">
+        <div class="card-badge">Timing</div>
+        <div class="card-icon block-icon"></div>
+        <h2>BLOCK DROP</h2>
+        <p>Stack oscillating blocks as high as possible.</p>
+        <div class="score-display">Best: <span id="score-block_drop">0</span></div>
+      </article>
+
+      <article class="card card-mint">
+        <div class="card-badge">Platformer</div>
+        <div class="card-icon dash-icon"></div>
+        <h2>SKY DASH</h2>
+        <p>Leap across sky islands, grab rings, and dodge obstacles.</p>
+        <div class="score-display">Best: <span id="score-sky_dash">0</span></div>
+      </article>
+
+      <article class="card card-pink">
+        <div class="card-badge">Discovery</div>
+        <div class="card-icon secret-icon"></div>
+        <h2>FIND SECRET</h2>
+        <p>Locate the subtle oddity hidden in procedural scenes.</p>
+        <div class="score-display">Best: <span id="score-find_secret">0</span></div>
+      </article>
+
+      <article class="card card-coral">
+        <div class="card-badge">Reflex</div>
+        <div class="card-icon color-icon"></div>
+        <h2>COLOR CHAOS</h2>
+        <p>Pop only the designated colored bubbles under changing rules.</p>
+        <div class="score-display">Best: <span id="score-color_chaos">0</span></div>
+      </article>
+    </section>
+
+    <footer class="launch-instructions">
+      <div class="instruction-box">
+        <h3>Play Offline Native</h3>
+        <p>Run the arcade engine directly from your terminal:</p>
+        <code>python main.py</code>
+      </div>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

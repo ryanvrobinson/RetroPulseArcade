@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RetroPulse Arcade — 6-in-1 Handcrafted Pixel World</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="sky-background">
+    <div class="pixel-cloud cloud-1"></div>
+    <div class="pixel-cloud cloud-2"></div>
+    <div class="pixel-cloud cloud-3"></div>
+  </div>
+
+  <main class="launcher-container">
+    <header class="header">
+      <h1 class="logo">RETRO PULSE</h1>
+      <p class="tagline">6-in-1 Handcrafted 2D Cartoon Arcade World</p>
+    </header>
+
+    <section class="game-grid">
+      <article class="card card-yellow">
+        <div class="card-badge">Reaction</div>
+        <div class="card-icon flash-icon"></div>
+        <h2>FLASH!</h2>
+        <p>Burst pulsing targets across floating sky clouds!</p>
+        <div class="score-display">Best: <span id="score-flash">0</span></div>
+      </article>
+
+      <article class="card card-coral">
+        <div class="card-badge">Survival</div>
+        <div class="card-icon dodge-icon"></div>
+        <h2>DON'T GET HIT</h2>
+        <p>Sprint with Pulse and weave past bouncing hazard storms.</p>
+        <div class="score-display">Best: <span id="score-dodge">0</span></div>
+      </article>
+
+      <article class="card card-mint">
+        <div class="card-badge">Observation</div>
+        <div class="card-icon spot-icon"></div>
+        <h2>SPOT IT!</h2>
+        <p>Memorize items in the meadow clearing and find what altered.</p>
+        <div class="score-display">Best: <span id="score-spot_it">0</span></div>
+      </article>
+
+      <article class="card card-pink">
+        <div class="card-badge">Skill Shot</div>
+        <div class="card-icon archery-icon"></div>
+        <h2>ARCHERY</h2>
+        <p>Calculate arrows trajectories and hit target bullseyes.</p>
+        <div class="score-display">Best: <span id="score-archery">0</span></div>
+      </article>
+
+      <article class="card card-blue">
+        <div class="card-badge">Speed</div>
+        <div class="card-icon traffic-icon"></div>
+        <h2>TRAFFIC RIDER</h2>
+        <p>Steer down a city highway, dodge trucks, and rack up near-misses!</p>
+        <div class="score-display">Best: <span id="score-traffic">0</span></div>
+      </article>
+
+      <article class="card card-purple">
+        <div class="card-badge">Memory</div>
+        <div class="card-icon memory-icon"></div>
+        <h2>MEMORY PUZZLE</h2>
+        <p>Uncover and match cartoon card pairs before the clock ticks down!</p>
+        <div class="score-display">Best: <span id="score-memory">0</span></div>
+      </article>
+    </section>
+
+    <footer class="launch-instructions">
+      <div class="instruction-box">
+        <h3>Play Offline Native</h3>
+        <p>Run the Pygame engine directly from your terminal:</p>
+        <code>python main.py</code>
+      </div>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

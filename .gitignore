@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+*.log
+debug_output.txt
+output.txt
+data/settings.json
