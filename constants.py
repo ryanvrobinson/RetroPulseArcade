@@ -28,10 +28,10 @@ C_LIGHT_GRAY  = (203, 213, 225)
 C_DANGER      = (239, 68, 68)
 C_SUN         = (254, 240, 138)
 
-# Exact 10 Games
+# Exact 11 Games
 ALL_GAME_KEYS = [
     "flash", "dodge", "spot_it", "archery", "traffic",
-    "memory", "block_drop", "sky_dash", "find_secret", "color_chaos"
+    "memory", "block_drop", "sky_dash", "find_secret", "color_chaos", "neon_rush"
 ]
 
 GAME_TITLES = {
@@ -44,7 +44,8 @@ GAME_TITLES = {
     "block_drop": "BLOCK DROP",
     "sky_dash": "SKY DASH",
     "find_secret": "FIND THE SECRET",
-    "color_chaos": "COLOR CHAOS"
+    "color_chaos": "COLOR CHAOS",
+    "neon_rush": "NEON RUSH"
 }
 
 pygame.font.init()

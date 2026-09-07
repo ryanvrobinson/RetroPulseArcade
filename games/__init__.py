@@ -8,3 +8,4 @@ from games.block_drop import GameBlockDrop
 from games.sky_dash import GameSkyDash
 from games.find_secret import GameFindSecret
 from games.color_chaos import GameColorChaos
+from games.neon_rush import GameNeonRush

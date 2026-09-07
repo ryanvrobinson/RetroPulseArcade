@@ -9,7 +9,7 @@ import pygame
 from constants import (
     SCREEN_WIDTH, SCREEN_HEIGHT, FPS, ALL_GAME_KEYS, GAME_TITLES,
     C_SLATE_DARK, C_CORAL, C_YELLOW, C_CREAM, C_WHITE, C_GOLD, C_MINT,
-    C_BLUE_CARD, C_ROAD, C_PURPLE, C_BROWN, C_DANGER, C_LIGHT_GRAY, C_SUN,
+    C_BLUE_CARD, C_ROAD, C_ROAD_LINE, C_PURPLE, C_BROWN, C_DANGER, C_LIGHT_GRAY, C_SUN,
     FONT_HUGE, FONT_TITLE, FONT_CARD, FONT_BODY, draw_pixel_box
 )
 from audio import play_sound
@@ -21,7 +21,7 @@ from tournament import tournament_manager, settings_manager
 # Exact 10 Games exported from games package
 from games import (
     GameFlash, GameDodge, GameSpotIt, GameArchery, GameTrafficRider,
-    GameMemoryPuzzle, GameBlockDrop, GameSkyDash, GameFindSecret, GameColorChaos
+    GameMemoryPuzzle, GameBlockDrop, GameSkyDash, GameFindSecret, GameColorChaos, GameNeonRush
 )
 
 class RetroPulseApp:
@@ -45,7 +45,7 @@ class RetroPulseApp:
             "flash": GameFlash, "dodge": GameDodge, "spot_it": GameSpotIt,
             "archery": GameArchery, "traffic": GameTrafficRider, "memory": GameMemoryPuzzle,
             "block_drop": GameBlockDrop, "sky_dash": GameSkyDash,
-            "find_secret": GameFindSecret, "color_chaos": GameColorChaos
+            "find_secret": GameFindSecret, "color_chaos": GameColorChaos, "neon_rush": GameNeonRush
         }
         if game_key in mapping:
             self.game = mapping[game_key]()
@@ -103,7 +103,7 @@ class RetroPulseApp:
 
                 # Continuous keyboard polling
                 keys = pygame.key.get_pressed()
-                if self.state in ["DODGE", "TRAFFIC", "SKY_DASH"] and self.game:
+                if self.state in ["DODGE", "TRAFFIC", "SKY_DASH", "NEON_RUSH"] and self.game:
                     self.game.update(dt, keys)
                 elif self.game and self.state in [k.upper() for k in ALL_GAME_KEYS]:
                     self.game.update(dt)
@@ -315,6 +315,30 @@ class RetroPulseApp:
             elif key == "color_chaos":
                 pygame.draw.circle(surf, C_BLUE_CARD, (prev_rect.centerx - 20, prev_rect.centery), 12)
                 pygame.draw.circle(surf, C_DANGER, (prev_rect.centerx + 20, prev_rect.centery), 12)
+            elif key == "neon_rush":
+                # Draw a simple neon road with three lanes
+                road_width = 180
+                road_height = 60
+                road_x = prev_rect.centerx - road_width // 2
+                road_y = prev_rect.centery - road_height // 2
+                # Road base
+                pygame.draw.rect(surf, C_ROAD, (road_x, road_y, road_width, road_height), border_radius=4)
+                # Lane markers
+                for i in range(1, 3):
+                    lane_x = road_x + i * road_width // 3
+                    pygame.draw.line(surf, C_ROAD_LINE, (lane_x, road_y), (lane_x, road_y + road_height), 2)
+                # Draw Pulse character in middle lane (lane 1)
+                draw_pulse_character(surf, prev_rect.centerx, prev_rect.centery + 10, scale=0.5, state="RUN", anim_time=self.anim_time, facing_right=True)
+                # Draw an obstacle (barrier) in left lane
+                barrier_x = road_x + road_width // 6 - 10
+                barrier_y = road_y + road_height - 20
+                pygame.draw.rect(surf, C_CORAL, (barrier_x, barrier_y, 20, 20))
+                pygame.draw.rect(surf, C_WHITE, (barrier_x, barrier_y, 20, 20), 2)
+                # Draw an energy orb in right lane
+                orb_x = road_x + road_width * 5 // 6 - 10
+                orb_y = road_y + 20
+                pygame.draw.circle(surf, C_YELLOW, (orb_x, orb_y), 12)
+                pygame.draw.circle(surf, C_WHITE, (orb_x, orb_y), 12, 2)
 
             t_txt = FONT_CARD.render(GAME_TITLES[key], True, C_SLATE_DARK)
             surf.blit(t_txt, (draw_rect.centerx - t_txt.get_width() // 2, draw_rect.y + 104))

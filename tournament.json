@@ -1,33 +1,69 @@
 {
-  "player_name": "ryan",
+  "player_name": "fahadh",
   "player_scores": {
-    "flash": 4200,
-    "dodge": 2065,
-    "spot_it": 750,
-    "archery": 4950,
-    "traffic": 12608,
+    "flash": 0,
+    "dodge": 0,
+    "spot_it": 0,
+    "archery": 0,
+    "traffic": 0,
     "memory": 0,
-    "block_drop": 400,
-    "sky_dash": 150,
-    "find_secret": 1669500,
-    "color_chaos": 10600
+    "block_drop": 300,
+    "sky_dash": 0,
+    "find_secret": 0,
+    "color_chaos": 0,
+    "neon_rush": 4020
   },
-  "player_points": 257109,
-  "rivals": [],
-  "players": {
-    "ryan": {
-      "points": 257109,
+  "player_points": 2818,
+  "rivals": [
+    {
+      "name": "ryan",
+      "points": 261658,
       "scores": {
-        "flash": 4200,
+        "flash": 7400,
         "dodge": 2065,
         "spot_it": 750,
-        "archery": 4950,
+        "archery": 5625,
         "traffic": 12608,
-        "memory": 0,
+        "memory": 5000,
         "block_drop": 400,
         "sky_dash": 150,
         "find_secret": 1669500,
-        "color_chaos": 10600
+        "color_chaos": 10600,
+        "neon_rush": 0
+      }
+    }
+  ],
+  "players": {
+    "ryan": {
+      "points": 261658,
+      "scores": {
+        "flash": 7400,
+        "dodge": 2065,
+        "spot_it": 750,
+        "archery": 5625,
+        "traffic": 12608,
+        "memory": 5000,
+        "block_drop": 400,
+        "sky_dash": 150,
+        "find_secret": 1669500,
+        "color_chaos": 10600,
+        "neon_rush": 0
+      }
+    },
+    "fahadh": {
+      "points": 2818,
+      "scores": {
+        "flash": 0,
+        "dodge": 0,
+        "spot_it": 0,
+        "archery": 0,
+        "traffic": 0,
+        "memory": 0,
+        "block_drop": 300,
+        "sky_dash": 0,
+        "find_secret": 0,
+        "color_chaos": 0,
+        "neon_rush": 4020
       }
     }
   }

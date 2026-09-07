@@ -1,0 +1,25 @@
+RETROPULSE ARCADE - TEACHER LAPTOP CHECKLIST
+
+Before the exhibition, check on the teacher's laptop:
+
+[ ] Copy the entire RetroPulseArcade folder from the pendrive
+[ ] Confirm Python is installed
+[ ] Check whether Pygame is installed:
+    python -m pygame
+[ ] If Pygame is missing:
+    python -m pip install pygame
+[ ] Run the game:
+    .\PLAY_RETROPULSE.bat
+[ ] Test all 10 games
+[ ] Test tournament/player entry
+[ ] Test leaderboard
+[ ] Test settings
+[ ] Test keyboard controls
+[ ] Confirm the game saves/loads correctly
+[ ] Confirm the game closes without errors
+
+IMPORTANT:
+Do NOT run from GitHub.
+The current project is designed to run locally on the laptop.
+
+If anything fails, take a screenshot of the error before changing files.
